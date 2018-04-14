@@ -16,7 +16,7 @@ them according to the standard.
 
 Example:
 ```rust
-#[macro_use] extern crate xdg_macros;
+#[macro_use] extern crate xdg_user_macros;
 use std::path::PathBuf;
 use std::env::{self, home_dir};
 fn main() {

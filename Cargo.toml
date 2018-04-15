@@ -1,6 +1,6 @@
 [package]
 name = "xdg-user-macros"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Joseph R. Quinn <quinn.josephr@protonmail.com>"]
 homepage = "https://github.com/quinnjr/xdg-home-macros"
 keywords = ["xdg", "directory", "xdg base", "macro", "macros"]

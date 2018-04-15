@@ -6,7 +6,7 @@ description = """
 A set of macros to aid in user-focused development using the XDG standard user home directories.
 """
 homepage = "https://github.com/quinnjr/xdg-home-macros"
-keywords = ["xdg", "directory", "xdg base", "macro", "macros"]
+keywords = ["xdg", "directory", "macro", "macros"]
 license = "ISC"
 categories = ["filesystem"]
 

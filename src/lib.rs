@@ -45,18 +45,6 @@ use std::path::PathBuf;
 
 /// Returns a PathBuf pointing to what should be defined
 /// as the $XDG_CONFIG_HOME environment variable.
-///
-/// # Example
-///
-/// ```
-/// # #[macro_use] extern crate xdg_user_macros;
-/// # use std::path::PathBuf;
-/// # use std::env::{self, home_dir};
-/// let macro_path = xdg_config_home!("test");
-/// let mut expected = std::env::home_dir().unwrap();
-/// expected.push(".config/test");
-/// assert_eq!(macro_path, expected)
-/// ```
 #[macro_export]
 macro_rules! xdg_config_home {
     ($($x: expr),*) => {{
@@ -77,18 +65,6 @@ macro_rules! xdg_config_home {
 
 /// Returns a PathBuf pointing to what should be defined
 /// as the $XDG_CACHE_HOME environment variable.
-///
-/// # Example
-///
-/// ```
-/// # #[macro_use] extern crate xdg_user_macros;
-/// # use std::path::PathBuf;
-/// # use std::env::{self, home_dir};
-/// let macro_path = xdg_cache_home!("test");
-/// let mut expected = std::env::home_dir().unwrap();
-/// expected.push(".cache/test");
-/// assert_eq!(macro_path, expected)
-/// ```
 #[macro_export]
 macro_rules! xdg_cache_home {
     ($($x: expr),*) => {{
@@ -109,18 +85,6 @@ macro_rules! xdg_cache_home {
 
 /// Returns a PathBuf pointing to what should be defined
 /// as the $XDG_DATA_HOME environment variable.
-///
-/// # Example
-///
-/// ```
-/// # #[macro_use] extern crate xdg_user_macros;
-/// # use std::path::PathBuf;
-/// # use std::env::{self, home_dir};
-/// let macro_path = xdg_data_home!("test");
-/// let mut expected = std::env::home_dir().unwrap();
-/// expected.push(".local/share/test");
-/// assert_eq!(macro_path, expected)
-/// ```
 #[macro_export]
 macro_rules! xdg_data_home {
     ($($x: expr),*) => {{
@@ -144,20 +108,6 @@ macro_rules! xdg_data_home {
 ///
 /// This macro preferes to be set by an explicitly defined
 /// Environment variable.
-///
-/// # Example (Assuming the UID of the user is 1000)
-///
-/// ```
-/// # #[macro_use] extern crate xdg_user_macros;
-/// # extern crate libc;
-/// # use std::path::PathBuf;
-/// # use std::env::{self, home_dir};
-/// # use libc::{uid_t, getuid};
-/// let macro_path = xdg_runtime_dir!("test");
-/// let mut expected = PathBuf::from("/run/user/1000");
-/// expected.push("test");
-/// assert_eq!(macro_path, expected)
-/// ```
 #[macro_export]
 macro_rules! xdg_runtime_dir{
     ($($x: expr),*) => {{
